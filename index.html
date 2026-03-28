@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kapsul Waktu Ramadhan 2026 - 2027</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-awal">
+    <div class="overlay-gelap"></div>
+
+    <div class="container-main">
+      <div id="countdown-container">
+        <div class="hari-besar">
+          <span id="days">00</span>
+          <p>HARI MENUJU PEMBUKAAN</p>
+        </div>
+        <div class="waktu-kecil">
+          <div class="time-box">
+            <span id="hours">00</span>
+            <p>Jam</p>
+          </div>
+          <div class="time-box">
+            <span id="minutes">00</span>
+            <p>Menit</p>
+          </div>
+          <div class="time-box">
+            <span id="seconds">00</span>
+            <p>Detik</p>
+          </div>
+        </div>
+        <p id="status-text" class="status-waiting">
+          Menunggu verifikasi server Google...
+        </p>
+        <p class="target-waktu-teks">
+          Gembok terbuka pada: 10 Februari 2027, 00:00:01 WIB
+        </p>
+      </div>
+
+      <div id="result-container" class="hidden final-interface">
+        <h1 class="header-ramadhan">Selamat Menyambut Ramadhan 2027!</h1>
+        <p class="brankas-id">Brankas Kenangan #001</p>
+
+        <div class="final-buttons-bar">
+          <button id="info-btn" class="btn-vault btn-info">
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"
+              ></path>
+            </svg>
+            Pesan Nostalgia
+          </button>
+
+          <a
+            id="drive-link"
+            href="#"
+            target="_blank"
+            class="hidden btn-vault btn-drive"
+          >
+            <svg class="icon-svg" viewBox="0 0 24 24">
+              <path
+                d="M7 11.5l-4.2-7.3c-.3-.5-.3-1 0-1.5l.3-.5c.3-.5.8-.8 1.4-.8h14.9c.6 0 1.1.3 1.4.8l.3.5c.3.5.3 1 0 1.5l-4.2 7.3c-.3.5-.8.8-1.4.8H8.4c-.6 0-1.1-.3-1.4-.8z"
+              ></path>
+              <path
+                d="M12 13.5l4.2 7.3c.3.5.3 1 0 1.5l-.3.5c-.3.5-.8.8-1.4.8H9.5c-.6 0-1.1-.3-1.4-.8l-.3-.5c-.3-.5-.3-1 0-1.5l4.2-7.3z"
+                opacity=".5"
+              ></path>
+            </svg>
+            Buka RAR GDrive
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div id="pesan-modal" class="modal-overlay hidden-modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Catatan Kenangan</h2>
+          <button id="close-modal" class="btn-close">&times;</button>
+        </div>
+
+        <div id="detailed-message" class="detailed-text"></div>
+
+        <div class="sandi-container">
+          <p>Kata Sandi RAR (Tap untuk salin):</p>
+          <div id="sandi-text" class="sandi-box">Memuat Sandi...</div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

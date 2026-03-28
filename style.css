@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  color: #ffffff;
+  transition: background-image 2s ease-in-out;
+  overflow: hidden;
+}
+
+.overlay-gelap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+body.bg-awal {
+  background-image: url("awal.jpg");
+  background-size: cover;
+  background-position: center;
+}
+body.bg-akhir {
+  background-image: url("akhir.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.container-main {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  width: 90%;
+}
+
+/* Layout Countdown */
+.hari-besar {
+  margin-bottom: 25px;
+}
+.hari-besar span {
+  font-size: 8em;
+  font-weight: 900;
+  color: #f1c40f;
+  line-height: 1;
+  text-shadow: 0 0 30px rgba(241, 196, 15, 0.4);
+}
+.hari-besar p {
+  font-size: 1em;
+  letter-spacing: 5px;
+  color: #ecf0f1;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+.waktu-kecil {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.time-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 75px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+.time-box span {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: #fff;
+}
+.time-box p {
+  font-size: 0.75em;
+  color: #bdc3c7;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+.status-waiting {
+  color: #f1c40f;
+  font-size: 0.9em;
+  font-style: italic;
+}
+
+.target-waktu-teks {
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85em;
+  color: #aaaaaa;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Layout Fase 2: Brankas Minimalis */
+.final-interface {
+  padding: 30px;
+  border-radius: 20px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+.header-ramadhan {
+  font-size: 1.8em;
+  font-weight: 300;
+  color: #f1c40f;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.brankas-id {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #888;
+  margin-bottom: 30px;
+}
+.final-buttons-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-vault {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  color: white;
+}
+.icon-svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.btn-info {
+  background-color: rgba(243, 156, 18, 0.85);
+  border: 1px solid #f39c12;
+}
+.btn-info:hover {
+  background-color: rgba(243, 156, 18, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(243, 156, 18, 0.4);
+}
+.btn-drive {
+  background-color: rgba(39, 174, 96, 0.85);
+  border: 1px solid #27ae60;
+}
+.btn-drive:hover {
+  background-color: rgba(39, 174, 96, 1);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
+}
+
+/* Layout Modal & Sistem Copy */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  visibility: visible;
+  opacity: 1;
+}
+.hidden-modal {
+  visibility: hidden;
+  opacity: 0;
+}
+.modal-content {
+  background: #fff;
+  color: #222;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+}
+
+.modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 15px 15px 0 0;
+}
+.modal-header h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-close {
+  background: none;
+  border: none;
+  font-size: 2em;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+.btn-close:hover {
+  color: #e74c3c;
+}
+
+.detailed-text {
+  padding: 25px;
+  font-size: 1em;
+  line-height: 1.8;
+  color: #444;
+  white-space: pre-wrap;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Zona Sandi Interaktif */
+.sandi-container {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  border-top: 1px dashed #ccc;
+  text-align: center;
+  border-radius: 0 0 15px 15px;
+}
+.sandi-container p {
+  font-size: 0.85em;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.sandi-box {
+  background: #2c3e50;
+  color: #f1c40f;
+  padding: 15px;
+  border-radius: 8px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  word-break: break-all;
+  user-select: none;
+}
+.sandi-box:active {
+  transform: scale(0.96);
+}
